@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import {
   Container,
   Card,
+  Form,
   Button,
   Row,
   Col
 } from 'react-bootstrap';
 
 // import { getMe, deleteBook } from '../utils/API';
-import { GET_ME } from "../utils/queries";
+import { QUERY_ME } from "../utils/queries";
 import { REMOVE_BOOK } from "../utils/mutations";
 import { gql, useQuery,  useMutation } from '@apollo/client';
 
