@@ -18,6 +18,9 @@ import { removeBookId } from '../utils/localStorage';
 const SavedBooks = () => {
   // const [userData, setUserData] = useState({});
   // const userDataLength = Object.keys(userData).length;
+  const { loading, data } = useQuery(QUERY_ME);
+  let userData = data?.me || {};
+  const [removeBook] = useMutation(REMOVE_BOOK);
 
   // useEffect(() => {
   //   const getUserData = async () => {
@@ -62,13 +65,19 @@ const SavedBooks = () => {
       // const updatedUser = await response.json();
       // setUserData(updatedUser);
       // removeBookId(bookId);
+      const { data } = await removeBook({
+        variables: { bookId },
+      });
+
+      removeBookId(bookId);
+
     } catch (err) {
       console.error(err);
     }
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
