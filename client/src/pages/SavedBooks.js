@@ -8,9 +8,9 @@ import {
 } from 'react-bootstrap';
 
 // import { getMe, deleteBook } from '../utils/API';
+import { gql, useQuery,  useMutation } from '@apollo/client';
 import { QUERY_ME } from "../utils/queries";
 import { REMOVE_BOOK } from "../utils/mutations";
-import { gql, useQuery,  useMutation } from '@apollo/client';
 
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
