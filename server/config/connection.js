@@ -1,10 +1,5 @@
-const mongoose = require('mongoose');
+import { connect, connection } from 'mongoose';
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/book_db');
 
-module.exports = mongoose.connection;
+export default connection;

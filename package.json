@@ -22,17 +22,18 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.3",
+    "@apollo/client": "^3.8.4",
     "apollo-link-context": "^1.0.20",
     "apollo-server-express": "^3.12.1",
     "bootstrap": "^5.3.1",
     "express": "^4.18.2",
     "express-favicon": "^2.0.4",
     "graphql-tag": "^2.12.6",
+    "graphql-ws": "^5.14.0",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^3.1.2",
-    "mongodb": "^6.0.0",
+    "mongodb": "^6.1.0",
     "serve-favicon": "^2.5.0"
   }
 }
